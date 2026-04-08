@@ -22,6 +22,7 @@ Template Name: Custom Layout
         <?php the_content(); ?>
       </article>
       
+      <!--  While Loop -->
       <?php endwhile;
         else :
           echo '<p>No content found</p>';

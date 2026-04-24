@@ -114,6 +114,7 @@ article.post:last-of-type {
 --------------------------------------------------*/
 
 .site-footer nav ul li {
+  margin-top: 20px;
   margin-right: 10px;
   padding-right: 10px;
   border-right: 1px dotted #bbb;

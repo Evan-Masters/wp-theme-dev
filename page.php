@@ -10,9 +10,7 @@
       <!-- Article -->
       <article class="post page">
         <!-- Post Heading -->
-        <h2>
-          <?php the_title(); ?>
-        </h2>
+        <h2><?php the_title(); ?></h2>
         <!-- Post Content -->
         <?php the_content(); ?>
       </article>

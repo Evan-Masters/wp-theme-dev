@@ -5,19 +5,129 @@ Author URI: https://www.youtube.com/@LearnWebCode
 Version: 1.0
 */
 
+/*--------------------------------------------------
+  Global
+--------------------------------------------------*/
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/*--------------------------------------------------
+  Typography
+--------------------------------------------------*/
+
 body {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1rem;
   color: #333;
 }
 
-a:link,
+p {
+  line-height: 1.65em;
+  margin-bottom: 1em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  margin-bottom: 1em;
+}
+
+a,
 a:visited {
   color: #006ec3;
 }
 
-p {
-  line-height: 1.65em;
+/*--------------------------------------------------
+  Header
+--------------------------------------------------*/
+
+.site-header {
+  border-bottom: 2px solid #ddd;
+  margin-bottom: 20px;
+  padding-top: 30px;
+}
+
+.site-header h1 a,
+.site-header h1 a:visited {
+  text-decoration: none;
+}
+
+.site-header nav ul li a,
+.site-header nav ul li a:visited {
+  display: block;
+  padding: 10px 18px;
+  border: 1px solid #bbb;
+  border-bottom: none;
+  text-decoration: none;
+}
+
+.site-header nav ul li:hover {
+  background-color: #ececec;
+}
+
+.site-header nav ul li.current-menu-item a,
+.site-header nav ul li.current-menu-item a:visited,
+.site-header nav ul li.current-page-ancestor a,
+.site-header nav ul li.current-page-ancestor a:visited {
+  background-color: #006ec3;
+  color: #fff;
+}
+
+/*--------------------------------------------------
+  Footer
+--------------------------------------------------*/
+
+.site-footer {
+  border-top: 2px solid #ddd;
+  margin-top: 30px;
+}
+
+.site-footer nav ul li {
+  margin-top: 20px;
+  margin-right: 10px;
+  padding-right: 10px;
+  border-right: 1px dotted #bbb;
+}
+
+.site-footer nav ul li:last-of-type {
+  border-right: none;
+}
+
+.site-footer .site-nav {
+  margin-bottom: 20px;
+}
+
+/*--------------------------------------------------
+  Site Navigation
+--------------------------------------------------*/
+
+.site-nav ul::before,
+.site-nav ul::after {
+  content: "";
+  display: table;
+}
+
+.site-nav ul::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.site-nav ul li {
+  list-style: none;
+  float: left;
+}
+
+.site-header nav ul li {
+  margin-right: 5px;
 }
 
 /*--------------------------------------------------
@@ -31,119 +141,27 @@ div.container {
   padding-right: 20px;
 }
 
-/*--------------------------------------------------
-  Article 
---------------------------------------------------*/
-
-article.post {
-  border-bottom: 2px dotted #bbbbbb;
-}
-
-article.post:last-of-type {
-  border-bottom: none;
-}
-
-/* Header */
-.site-header {
-  border-bottom: 2px solid #999;
-}
-
-/* Footer */
-.site-footer {
-  margin-top: 30px;
-  border-top: 2px solid #999;
-}
-
-/*--------------------------------------------------
-  Navigation Menus
---------------------------------------------------*/
-
-.site-nav ul {
-  margin: 0;
-  padding: 0;
-}
-
-.site-nav ul::before,
-.site-nav ul::after {
+.clearfix:before,
+.clearfix:after {
   content: "";
   display: table;
 }
-
-.site-nav ul::after {
+.clearfix:after {
+  clear: both;
+}
+.clearfix::after {
+  content: "";
+  display: table;
   clear: both;
 }
 
-.site-nav ul {
-  *zoom: 1;
-}
-
-.site-nav ul li {
-  list-style: none;
-  float: left;
-}
-
-/*--------------------------------------------------
-  Header Menu 
---------------------------------------------------*/
-
-.site-header nav ul li {
-  margin-right: 5px;
-}
-
-.site-header nav ul li a:link,
-.site-header nav ul li a:visited {
-  display: block;
-  padding: 10px 18px;
-  border: 1px solid #bbb;
-  border-bottom: none;
-  text-decoration: none;
-}
-
-.site-header nav ul li:hover {
-  background-color: #ececec;
-}
-
-.site-header nav ul li.current-menu-item a:link,
-.site-header nav ul li.current-menu-item a:visited {
-  background-color: #006ec3;
-  color: #fff;
-}
-
-/*--------------------------------------------------
-  Footer Menu 
---------------------------------------------------*/
-
-.site-footer nav ul li {
-  margin-top: 20px;
-  margin-right: 10px;
-  padding-right: 10px;
-  border-right: 1px dotted #bbb;
-}
-
-/*--------------------------------------------------
-  Page Layout
---------------------------------------------------*/
-
+/*  Page Layout */
 article.page h2 {
   font-size: 60px;
-  margin-bottom: 20px;
+  margin: 20px 0;
 }
 
-/*--------------------------------------------------
-  Clearfix
---------------------------------------------------*/
-
-.clearfix:before, .clearfix:after { 
-  content: ""; display: table;
-}
-
-.clearfix:after {clear: both;}
-.clearfix {*zoom: 1;}
-
-/*--------------------------------------------------
-  Two Column Layout
---------------------------------------------------*/
-
+/*  Two Column Layout */
 div.title-col {
   width: 30%;
   float: left;
@@ -154,6 +172,88 @@ div.text-col {
   float: right;
 }
 
+/* Article / Content Area */
+article.post {
+  border-bottom: 2px dotted #bbbbbb;
+  margin-bottom: 20px;
+}
+
+article.post:last-of-type {
+  border-bottom: none;
+}
+
+/* Info Box Styles */
+div.info-box {
+  width: 30%;
+  float: right;
+  margin: 0 0 30px 30px;
+  padding: 20px;
+  background-color: #eee;
+}
+
+div.info-box h4 {
+  margin-bottom: 6px;
+}
+
+div.info-box p {
+  font-size: 85%;
+}
+
 /*--------------------------------------------------
-  
+  Sub Navlinks
+--------------------------------------------------*/
+
+.children-links {
+  margin-bottom: 20px;
+  font-size: 80%;
+}
+
+.children-links a,
+.children-links a:visited {
+  text-decoration: none;
+}
+
+.children-links ul {
+  float: left;
+}
+
+.children-links li {
+  margin-right: 20px;
+}
+
+.children-links .parent-link {
+  float: left;
+  margin-right: 20px;
+  padding-right: 20px;
+  border-right: 1px solid #ddd;
+  font-size: 120%;
+  font-weight: bold;
+}
+
+.children-links .parent-link a,
+.children-links .parent-link a:visited {
+  color: #333;
+}
+
+.children-links .current_page-item {
+  border-bottom: 2px solid #000;
+  background-color: red !important;
+}
+.children-links .current_page-item a,
+.children-links .current_page_item a:visited {
+  color: #333;
+  cursor: default;
+  border-bottom: 2px solid #000;
+}
+
+/*--------------------------------------------------
+  Note
+--------------------------------------------------*/
+
+/*--------------------------------------------------
+  Note
+--------------------------------------------------*/
+
+/*--------------------------------------------------
+  Note
 --------------------------------------------------*/

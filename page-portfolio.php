@@ -13,18 +13,19 @@
         <!-- col-container -->
         <div class="col-container clearfix">
 
-          <!-- title-col -->
+          <!-- Column -->
           <div class="title-col">
             <!-- Post Heading -->
             <h2><?php the_title(); ?></h2>
-          </div><!-- /title-col -->
+          </div>
 
-          <!-- text-col -->
+          <!-- Column -->
           <div class="text-col">
             <!-- Post Content -->
             <?php the_content(); ?>
-          </div><!-- /text-col -->
-        </div><!-- /col-container -->
+          </div>
+
+        </div>
 
       </article>
       

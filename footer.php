@@ -10,7 +10,7 @@
       <?php wp_nav_menu($args); ?>
     </nav>
 
-
+    <!-- Display Blog Info -->
     <p><?php bloginfo('name'); ?> - &copy; <?php echo date('Y'); ?></p>
 
   </footer>

@@ -26,3 +26,12 @@ function get_top_ancestor_id() {
   }
   return $post->ID; // return post id
 }
+
+// Does Page Have Children?
+// if 0 pages, then if statement on page.php will evaluate to false and Hide sub menu
+function has_children() {
+  global $post;
+  // This function will return an array
+  $pages = get_pages('child_of=' . $post->ID);
+  return count($pages);
+}

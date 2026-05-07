@@ -21,8 +21,8 @@
 
     <h5><?php bloginfo('description'); ?>
   
-    <?php if (is_page('about')) { ?>
-      - Thank you for viewing out work
+    <?php if (is_page('portfolio')) { ?>
+      - Thank you for viewing my work
     <?php }?>
   </h5>
 

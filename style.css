@@ -40,6 +40,14 @@ h6 {
   margin-bottom: 1em;
 }
 
+h1 {font-size: 48px; margin-bottom: 20px;}
+h2 {font-size: 36px; margin-bottom: 20px;}
+h3 {font-size: 28px; margin-bottom: 20px;}
+h4 {font-size: 24px; margin-bottom: 20px;}
+h5 {font-size: 20px; margin-bottom: 20px;}
+h6 {font-size: 18px; margin-bottom: 20px;}
+
+
 a,
 a:visited {
   color: #006ec3;
@@ -49,6 +57,7 @@ a:visited {
   General Layout
 --------------------------------------------------*/
 
+/* Container */
 div.container {
   max-width: 920px;
   margin: 0 auto;
@@ -56,6 +65,7 @@ div.container {
   padding-right: 20px;
 }
 
+/* Float Clearfix */
 .clearfix:before,
 .clearfix:after {
   content: "";
@@ -70,18 +80,11 @@ div.container {
   clear: both;
 }
 
-/*  Page Layout */
-article.page h2 {
-  font-size: 60px;
-  margin: 20px 0;
-}
-
 /*  Two Column Layout */
 div.title-col {
   width: 30%;
   float: left;
 }
-
 div.text-col {
   width: 70%;
   float: right;
@@ -92,7 +95,6 @@ article.post {
   border-bottom: 2px dotted #bbbbbb;
   margin-bottom: 20px;
 }
-
 article.post:last-of-type {
   border-bottom: none;
 }
@@ -105,11 +107,9 @@ div.info-box {
   padding: 20px;
   background-color: #eee;
 }
-
 div.info-box h4 {
   margin-bottom: 6px;
 }
-
 div.info-box p {
   font-size: 85%;
 }

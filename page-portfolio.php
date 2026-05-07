@@ -9,22 +9,26 @@
 
       <!-- Article -->
       <article class="post page">
+        
+        <!-- Content -->
+        <div class="content">
 
-        <!-- col-container -->
-        <div class="col-container clearfix">
+          <!-- col-container -->
+          <div class="col-container clearfix">
 
-          <!-- Column -->
-          <div class="title-col">
-            <!-- Post Heading -->
-            <h2><?php the_title(); ?></h2>
+            <!-- Column -->
+            <div class="title-col">
+              <!-- Post Heading -->
+              <h2><?php the_title(); ?></h2>
+            </div>
+
+            <!-- Column -->
+            <div class="text-col">
+              <!-- Post Content -->
+              <?php the_content(); ?>
+            </div>
+
           </div>
-
-          <!-- Column -->
-          <div class="text-col">
-            <!-- Post Content -->
-            <?php the_content(); ?>
-          </div>
-
         </div>
 
       </article>

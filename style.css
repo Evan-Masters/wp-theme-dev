@@ -95,8 +95,14 @@ article.post {
   border-bottom: 2px dotted #bbbbbb;
   margin-bottom: 20px;
 }
+article.post h2 {
+  font-size: 28px;
+}
 article.post:last-of-type {
   border-bottom: none;
+}
+article.post .content {
+  padding-top: 20px;
 }
 
 /* Info Box Styles */
@@ -205,6 +211,7 @@ div.info-box p {
 --------------------------------------------------*/
 
 .children-links {
+  padding-left: 18px;
   margin-bottom: 20px;
   font-size: 80%;
 }
